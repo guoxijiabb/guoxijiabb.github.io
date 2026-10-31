@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-demo-view]').forEach(button=>button.addEventListener('click',()=>{document.getElementById('demo-layout').classList.toggle('demo-layout--wide',button.dataset.demoView==='wide');document.querySelectorAll('[data-demo-view]').forEach(control=>control.setAttribute('aria-pressed',String(control===button)));}));

@@ -12,12 +12,12 @@ const chapters = [
   { title: '个性化行程与车宿地图', layout: 'portrait', caption: '把日期、自然偏好和同行节奏转化为旅程规划，展示慢路线、行程时间轴、共识分工与车宿地图界面概念。', alt: '泊野个性化行程规划、慢路线、同行共识、车宿地图及导航入口的 UI 设计长图' },
 ]
 
-document.getElementById('chapter-navigation').innerHTML = chapters.map((chapter, index) => `<a href="#chapter-${index + 1}">${String(index + 1).padStart(2, '0')} ${chapter.title}</a>`).join('')
+document.getElementById('chapter-navigation').innerHTML = '<a class="demo-nav-link" href="#interactive-demo">交互演示 ↗</a>' + chapters.map((chapter, index) => `<a href="#chapter-${index + 1}">${String(index + 1).padStart(2, '0')} ${chapter.title}</a>`).join('')
 
 fetch('/assets/visual/boye/manifest.json')
   .then((response) => { if (!response.ok) throw new Error('Image manifest unavailable'); return response.json() })
   .then((assets) => {
-    document.getElementById('project-boards').innerHTML = chapters.map((chapter, index) => {
+    document.getElementById('project-boards').innerHTML = '<a class="demo-nav-link" href="#interactive-demo">交互演示 ↗</a>' + chapters.map((chapter, index) => {
       const asset = assets[index]
       const original = `/assets/visual/boye/page-${index + 1}-original.jpg`
       return `<section class="chapter ${chapter.layout ? `chapter--${chapter.layout}` : ''}" id="chapter-${index + 1}">
