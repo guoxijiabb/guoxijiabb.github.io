@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1560" viewBox="0 0 1200 1560" fill="none">
+  <title>箐楼新篇·桐木真境 · 茶山与木构几何构成</title>
+  <defs><linearGradient id="tea" x2="1200" y2="1560" gradientUnits="userSpaceOnUse"><stop stop-color="#274A3E"/><stop offset="1" stop-color="#10231E"/></linearGradient></defs>
+  <path fill="url(#tea)" d="M0 0h1200v1560H0z"/>
+  <g stroke="#A6C4A0" stroke-width="2" stroke-opacity=".13"><path d="M80 280h1040M80 480h1040M80 680h1040M80 880h1040M80 1080h1040M240 210v940M480 210v940M720 210v940M960 210v940"/></g>
+  <g stroke="#A6C4A0" stroke-width="3" stroke-opacity=".55"><path d="M80 430c200-180 330 70 560-70s290-70 480-180M80 480c200-180 330 70 560-70s290-70 480-180M80 530c200-180 330 70 560-70s290-70 480-180M80 580c200-180 330 70 560-70s290-70 480-180"/></g>
+  <path d="m90 760 160-170h700l160 170H90Z" fill="#10231E" stroke="#E9DFC6" stroke-width="3"/>
+  <path d="M160 760v320h880V760M160 905h880M280 760v320M400 760v320M520 760v320M680 760v320M800 760v320M920 760v320" stroke="#A6C4A0" stroke-width="3"/>
+  <path d="M440 1080V840a70 70 0 0 1 140 0v240M620 1080V840a70 70 0 0 1 140 0v240" fill="#DFA36A" fill-opacity=".16" stroke="#DFA36A" stroke-width="4"/>
+  <path d="M472 1080V855a38 38 0 0 1 76 0v225M652 1080V855a38 38 0 0 1 76 0v225" stroke="#DFA36A" stroke-width="2" stroke-opacity=".6"/>
+  <path d="M90 1080h1020M80 1190h1040" stroke="#A6C4A0" stroke-width="2" stroke-opacity=".4"/>
+  <g fill="#DFA36A"><circle cx="280" cy="905" r="11"/><circle cx="920" cy="905" r="11"/></g>
+  <text x="80" y="115" fill="#A6C4A0" font-family="Arial, sans-serif" font-size="28" letter-spacing="5">TEA CULTURE /</text>
+  <text x="80" y="162" fill="#A6C4A0" font-family="Arial, sans-serif" font-size="28" letter-spacing="5">RURAL RENEWAL</text>
+  <g fill="#E9DFC6" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="116" font-weight="700"><text x="80" y="1340">箐楼新篇</text><text x="80" y="1480">桐木真境</text></g>
+</svg>

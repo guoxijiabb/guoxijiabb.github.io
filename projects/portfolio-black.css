@@ -1,0 +1,18 @@
+/* Shared portfolio chrome only. The blue palette matches the homepage cover;
+   artwork, app prototypes and QR quiet zones retain their designed colors. */
+:root { --brand-blue: #70b5e9; --brand-blue-light: #b5e4ff; --brand-blue-deep: #3d83b6; --brand-blue-surface: #0b1b29; --brand-blue-border: #315f80; --brand-blue-ink: #04121c; }
+html { background: #000 !important; color-scheme: dark !important; }
+body { --paper: #000 !important; --ink: #f4f3ef !important; --muted: #aaa !important; --line: #333 !important; --accent: var(--brand-blue) !important; background: #000 !important; color: #f4f3ef !important; }
+.bar, .company-project, .company-links, .scope-table, .scope-table thead, .process-grid li, .published, .purple-note, .demo-layout { background: #080808 !important; color: var(--ink) !important; border-color: #333 !important; box-shadow: none !important; }
+.chapter-nav a, .demo-view-controls button { background: #111 !important; color: #ddd !important; border-color: #444 !important; }
+.chapter-nav a:hover, .chapter-nav .demo-nav-link, .return.return--primary { background: var(--brand-blue) !important; color: var(--brand-blue-ink) !important; border-color: var(--brand-blue) !important; }
+.return { border-color: #444 !important; background: #111 !important; color: #f4f3ef !important; }
+.board { background: #000 !important; border-color: #333 !important; }
+.demo-intro > p, .demo-badge, .demo-features, .demo-notice, .demo-hint { color: #aaa !important; }
+.company-project__cover, .company-project img { background-color: #000 !important; }
+.caption, .breadcrumb { color: #aaa !important; }
+.hero h1, .company-hero h1 { color: var(--brand-blue-light); }
+.chapter-heading a, .back, .demo-external { color: var(--brand-blue) !important; }
+.chapter-heading > span, .company-project__number { color: var(--brand-blue); }
+::selection { color: var(--brand-blue-ink); background: var(--brand-blue); }
+@media (hover: hover) and (pointer: fine) { .return:hover { color: var(--brand-blue-ink) !important; background: var(--brand-blue) !important; } }

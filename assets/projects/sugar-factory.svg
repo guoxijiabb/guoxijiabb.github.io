@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <title>糖厂记忆影像 · 工业遗产几何构成</title>
+  <defs><linearGradient id="brick" x2="1600" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#4A302C"/><stop offset="1" stop-color="#211A1A"/></linearGradient></defs>
+  <path fill="url(#brick)" d="M0 0h1600v1000H0z"/>
+  <g stroke="#C48462" stroke-width="2" stroke-opacity=".15"><path d="M80 220h1440M80 380h1440M80 540h1440M80 700h1440M240 180v570M560 180v570M880 180v570M1200 180v570"/></g>
+  <g stroke="#C48462" stroke-width="2" stroke-opacity=".5"><circle cx="1140" cy="438" r="230"/><circle cx="1140" cy="438" r="180"/><path d="M1140 170v535M872 438h536"/></g>
+  <path d="M180 720V460l240-155v155l240-155v155l240-155v415H180Z" fill="#352624" stroke="#E8DECA" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M180 460h720M180 585h720M420 460v260M660 460v260" stroke="#C48462" stroke-width="2"/>
+  <path d="m180 460 240-155v90l-138 65H180Zm240 0 240-155v90l-138 65H420Zm240 0 240-155v90l-138 65H660Z" fill="#C48462" fill-opacity=".3"/>
+  <path d="M1030 720V230h110v490M1015 230h140M1015 265h140" fill="#352624" stroke="#E8DECA" stroke-width="3"/>
+  <g fill="#A9B6A1" fill-opacity=".65"><path d="M230 510h140v30H230zM470 510h140v30H470zM710 510h140v30H710z"/></g>
+  <path d="M250 720v-80h100v80M490 720v-80h100v80M730 720v-80h100v80" stroke="#C48462" stroke-width="3"/>
+  <path d="M120 750h1310M80 806h1440" stroke="#C48462" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M155 680h165l120-105h360l185 105h365" stroke="#A9B6A1" stroke-width="4" stroke-dasharray="12 14"/>
+  <g fill="#A9B6A1"><circle cx="320" cy="680" r="12"/><circle cx="800" cy="575" r="12"/><circle cx="1350" cy="680" r="12"/></g>
+  <text x="80" y="115" fill="#C48462" font-family="Arial, sans-serif" font-size="30" letter-spacing="6">SUGAR FACTORY / INDUSTRIAL MEMORY</text>
+  <text x="80" y="926" fill="#E8DECA" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="118" font-weight="700">糖厂记忆影像</text>
+</svg>

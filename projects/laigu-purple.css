@@ -1,0 +1,12 @@
+body { --paper: #fbf8fc; --ink: #35293c; --muted: #796b81; --line: #e6dce9; --accent: #7e548f; }
+.purple-subtitle { margin: 18px 0 0; font-size: clamp(20px, 2vw, 28px); line-height: 1.6; font-weight: 400; }
+.purple-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.purple-gallery figure { min-width: 0; margin: 0; }
+.purple-gallery .board { border-color: #d9c6e1; background: #4a3553; }
+.purple-gallery img { width: 100%; height: auto; }
+.purple-gallery figcaption { margin-top: 14px; color: var(--muted); font-size: 12px; line-height: 1.85; }
+.purple-gallery figcaption strong { display: block; margin-bottom: 5px; color: var(--ink); font-size: 15px; font-weight: 500; }
+.purple-note { background: #f1e9f5; }
+.purple-note .note-source { margin-bottom: 18px; font-size: 12px; }
+.purple-tags { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 20px 0 26px; padding: 0; list-style: none; color: #704881; font-size: 12px; line-height: 1.8; }
+@media (max-width: 600px) { .purple-gallery { grid-template-columns: minmax(0, 1fr); gap: 30px; } }

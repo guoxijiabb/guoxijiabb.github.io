@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>联系二维码｜郭喜嘉</title>
+<link rel="stylesheet" href="../projects/portfolio-black.css">
+<style>
+body > main{background:#080808!important;color:#f4f3ef;border-color:#333!important}body > main > p{color:#aaa}
+*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;background:#f3efeb;color:#252321;font-family:'Microsoft YaHei','PingFang SC',sans-serif;padding:24px}main{width:min(100%,420px);background:#fff;border:1px solid #e7e0da;border-radius:16px;padding:28px;text-align:center}h1{font-size:24px;margin:0 0 12px}p{font-size:13px;color:#807a75;line-height:1.8}.qr-frame{max-width:320px;width:100%;padding:16px;margin:24px auto;border:1px solid #e7e0da;background:#fff}.qr-window{display:block;position:relative;width:100%;aspect-ratio:1;overflow:hidden}.qr-window img{position:absolute;top:-3.278689%;left:var(--qr-left);width:310.245902%;max-width:none;height:auto}a{display:inline-block;color:#bc2d21;text-decoration:none;font-size:13px;padding:12px;margin:4px;border:1px solid #e7e0da;border-radius:6px}a:focus-visible{outline:2px solid #bc2d21;outline-offset:3px}
+</style></head>
+<body><main><h1 id="title">联系二维码</h1><p id="help">请使用手机扫码</p><div class="qr-frame"><span class="qr-window" id="qr-window"><img src="/assets/contact/qr-codes.png" id="qr-image" alt="联系二维码"></span></div><a id="destination" target="_blank" rel="noopener noreferrer">打开链接 ↗</a><a href="/#contact">返回联系区</a></main>
+<script>
+const codes={wechat:{title:'微信联系',help:'请使用微信扫一扫添加联系',left:'-1.639344%',url:'https://u.wechat.com/MNwIQdNduKhrA9GnTjc0Vp4?s=4'},portfolio:{title:'作品集',help:'扫码或点击下方链接，查看飞书作品集',left:'-103.278689%',url:'https://my.feishu.cn/file/Trcabyw5soPn6yxwTpYcjkt7nfd?from=from_qr_code'},zcool:{title:'站酷主页',help:'扫码或点击下方链接，查看站酷个人主页',left:'-201.639344%',url:'https://m.zcool.com.cn/u/ZNjEzMjkyNzI=?visualAngle=1'}};
+const code=codes[new URLSearchParams(location.search).get('code')]||codes.wechat;
+document.title=code.title+'二维码｜郭喜嘉';document.querySelector('#title').textContent=code.title;document.querySelector('#help').textContent=code.help;document.querySelector('#qr-window').style.setProperty('--qr-left',code.left);document.querySelector('#qr-image').alt=code.title+'二维码';document.querySelector('#destination').href=code.url;
+</script></body></html>

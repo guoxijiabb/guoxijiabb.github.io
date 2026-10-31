@@ -1,0 +1,16 @@
+.lens-subtitle { margin: 20px 0 0; color: var(--ink); font-size: clamp(20px, 2vw, 28px); line-height: 1.6; }
+.lens-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; }
+.lens-gallery figure { min-width: 0; margin: 0; }
+.lens-gallery .lens-gallery__overview { grid-column: 1 / -1; width: min(100%, 800px); justify-self: center; }
+.lens-gallery img { display: block; width: 100%; height: auto; }
+.lens-gallery figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.lens-gallery figcaption strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 17px; font-weight: 500; }
+.lens-gallery .board:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.lens-detail-strip { width: min(100%, 860px); margin: 28px auto 0; }
+.lens-detail-strip a { display: block; line-height: 0; }
+.lens-detail-strip img { display: block; width: 100%; height: auto; }
+.lens-detail-strip a:focus-visible { position: relative; z-index: 1; outline: 3px solid var(--accent); outline-offset: -3px; }
+@media (max-width: 600px) {
+  .lens-gallery { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .lens-gallery .lens-gallery__overview { grid-column: auto; }
+}

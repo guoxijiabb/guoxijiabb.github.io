@@ -1,0 +1,79 @@
+/* Artwork viewer inherits the portfolio's dark presentation. */
+.poster-gallery {
+  color: #fff;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: auto;
+  max-width: none;
+  max-height: calc(100dvh - 48px);
+  width: min(1000px, calc(100vw - 64px), calc(148dvh * .663 + 24px));
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #8b9cac #162431;
+  scrollbar-width: thin;
+}
+.poster-gallery::backdrop {
+  background: rgb(2 8 15 / 66%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.poster-gallery__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.poster-gallery__header h2 {
+  margin: 0;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.poster-gallery__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 80px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid rgb(255 255 255 / 45%);
+  background: rgb(2 8 15 / 72%);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.poster-gallery__close:hover { background: #184564; }
+.poster-gallery__close:focus-visible { outline: 2px solid #63c7ff; outline-offset: 4px; }
+.poster-gallery__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.poster-gallery__pair figure { margin: 0; min-width: 0; }
+.poster-gallery__pair img { display: block; width: 100%; height: auto; }
+html.poster-gallery-open { overflow: hidden; }
+.poster-card { cursor: pointer; }
+/* A single poster uses the same viewer with its own original aspect ratio. */
+.poster-gallery[data-layout="single"] {
+  width: min(640px, calc(100vw - 64px), calc((100dvh - 150px) * var(--poster-ratio, .663)));
+}
+.poster-gallery[data-layout="single"] .poster-gallery__pair { grid-template-columns: minmax(0, 1fr); }
+/* The movement series shares one cover card and opens all three originals. */
+.poster-collection:has(#poster-100-day-movement-title) .poster-grid {
+  grid-template-columns: minmax(0, 1fr);
+  width: calc((100% - 32px) / 3);
+}
+.poster-gallery[data-layout="series"] {
+  width: min(1440px, calc(100vw - 64px), calc((100dvh - 150px) * 1.6884 + 48px));
+}
+.poster-gallery[data-layout="series"] .poster-gallery__pair { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 760px) {
+  .poster-collection:has(#poster-100-day-movement-title) .poster-grid { width: 100%; }
+}
+@media (max-width: 600px) {
+  .poster-gallery, .poster-gallery[data-layout="single"], .poster-gallery[data-layout="series"] { width: calc(100vw - 32px); max-height: calc(100dvh - 32px); }
+  .poster-gallery__header { position: sticky; top: 0; z-index: 1; padding: 8px 0; margin-bottom: 12px; background: #08121c; gap: 12px; }
+  .poster-gallery__header h2 { font-size: 14px; padding-left: 8px; }
+  .poster-gallery__pair, .poster-gallery[data-layout="series"] .poster-gallery__pair { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}

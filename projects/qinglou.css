@@ -1,0 +1,10 @@
+body { --accent: #a3c1b5; --line: #364942; }
+.board { border-color: #496258; }
+.chapter-heading a { color: #b6c9c0; }
+.boards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.boards-grid .chapter { min-width: 0; padding-bottom: 0; }
+.boards-grid .chapter-heading { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 7px 8px; }
+.boards-grid .chapter-heading h2 { font-size: 20px; }
+.boards-grid .chapter-heading a { grid-column: 2; margin-left: 0; line-height: 1.8; }
+.closing { margin-top: 58px; }
+@media (max-width: 1100px) { .boards-grid { grid-template-columns: 1fr; gap: 44px; } }

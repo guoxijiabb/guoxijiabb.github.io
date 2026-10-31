@@ -1,0 +1,5 @@
+.story-video { --video-aspect: 1.3416666667; }
+.story-video__player { display: block; width: min(100%, 1120px, calc(78svh * var(--video-aspect))); height: auto; aspect-ratio: var(--video-aspect); margin-inline: auto; border: 1px solid var(--line); border-radius: 7px; background: #000; color-scheme: dark; }
+.story-video__player:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.story-video > .caption { text-align: center; }
+@media (max-width: 540px) { .story-video__player { width: 100%; } }

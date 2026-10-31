@@ -1,0 +1,5 @@
+body { --paper: #f8fcfd; --ink: #163e4b; --muted: #607980; --line: #d7e7ea; --accent: #1585a7; }
+.chapter-nav a[href="#chapter-2"] { background: #fff; border-color: var(--line); }
+.chapter-nav a:hover { background: var(--ink); border-color: var(--ink); }
+.chapter--long .board { max-width: 850px; }
+@media (max-width: 540px) { .hero h1 { font-size: 36px; } .subtitle { font-size: 23px; } }

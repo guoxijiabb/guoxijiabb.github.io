@@ -1,0 +1,11 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="1000" fill="#111016"/>
+<path d="M-40 770C260 610 405 660 676 510C980 342 1194 366 1645 104" stroke="#FF6B4A" stroke-width="160" opacity=".88"/>
+<path d="M-50 770C260 610 405 660 676 510C980 342 1194 366 1645 104" stroke="#F5E8C6" stroke-width="4"/>
+<path d="M160 890L220 560M305 850L365 530M505 740L560 430M780 590L840 285M1070 430L1120 180" stroke="#F5E8C6" stroke-width="2" opacity=".55"/>
+<g stroke="#F5E8C6" opacity=".45"><path d="M90 120H1510"/><path d="M90 180H1510"/><path d="M90 240H1510"/><path d="M90 300H1510"/></g>
+<g fill="#B9FF54"><circle cx="350" cy="630" r="18"/><circle cx="730" cy="490" r="18"/><circle cx="1080" cy="340" r="18"/></g>
+<text x="82" y="105" fill="#F5E8C6" font-family="Arial" font-size="34" letter-spacing="9">JINJIN YOUWEI / FOOD CULTURE AXIS</text>
+<text x="82" y="932" fill="#F5E8C6" font-family="Arial" font-size="110" font-weight="700">津津有味</text>
+<text x="1290" y="930" fill="#FF6B4A" font-family="Arial" font-size="30">23°07'N / 113°14'E</text>
+</svg>

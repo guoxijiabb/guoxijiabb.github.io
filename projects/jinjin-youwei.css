@@ -1,0 +1,8 @@
+body { --paper: #101014; --ink: #f2e9d5; --muted: #b7afa5; --line: #3d3432; --accent: #ed745a; }
+.hero h1 { font-size: clamp(58px, 7vw, 104px); letter-spacing: -.04em; }
+.subtitle { font-size: clamp(23px, 2.6vw, 36px); }
+.hero-link { display: inline-flex; margin-top: 28px; }
+.board { border-color: #4a3f39; border-radius: 5px; }
+.chapter-heading a { color: #c8b8a3; }
+.chapter-nav a:hover { background: var(--accent); color: #101014; border-color: var(--accent); }
+@media (max-width: 540px) { .hero h1 { font-size: 58px; } .chapter-heading { gap: 8px 12px; } .chapter-heading a { margin-left: 24px; } }

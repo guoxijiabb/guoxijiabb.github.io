@@ -1,0 +1,7 @@
+body { --paper: #f7f9fc; --ink: #193d83; --muted: #5d6f8b; --line: #d9e1ee; --accent: #254ca4; }
+.shell { max-width: 1400px; }
+.hero h1 { font-size: clamp(60px, 7.5vw, 112px); letter-spacing: -.045em; }
+.hero-link { display: inline-flex; margin-top: 28px; }
+.chapter { padding-bottom: 44px; }
+.board { border-radius: 5px; }
+@media (max-width: 540px) { .hero h1 { font-size: 62px; } .chapter { padding-bottom: 32px; } .chapter-heading { gap: 8px 12px; } }

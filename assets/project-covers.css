@@ -1,0 +1,28 @@
+/* Preserve the complete supplied title cover inside the existing card. */
+.visual-card--masquerade-party .visual-card__cover { background: #fff; }
+.visual-card--masquerade-party .visual-card__cover img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+/* Event projects share the reference card dimensions, with three per row. */
+.visual-grid--events {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  max-width: 1040px;
+  gap: 22px;
+  margin-inline: auto;
+}
+.visual-grid--events .visual-card { display: flex; flex-direction: column; height: 100%; }
+.visual-grid--events .visual-card__cover { aspect-ratio: 4 / 3; flex: none; }
+.visual-grid--events .visual-card__cover img { object-fit: contain; transform: none; }
+.visual-grid--events .visual-card__body { display: flex; flex-direction: column; flex: 1; }
+.visual-grid--events .visual-card__body h3 { white-space: normal; line-height: 1.6; }
+.visual-grid--events .visual-card__meta { margin-top: auto; }
+.visual-card--recharge-festival .visual-card__cover { background: #409ff1; }
+@media (max-width: 760px) {
+  .visual-grid--events { grid-template-columns: minmax(0, 1fr); max-width: 520px; gap: 20px; }
+}
+
+.visual-card--interest-tryout .visual-card__cover { background: #fff; }

@@ -1,0 +1,7 @@
+.nature-subtitle { margin: 18px 0 0; font-size: clamp(20px, 2vw, 28px); line-height: 1.6; font-weight: 400; }
+.nature-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+.nature-gallery figure { min-width: 0; margin: 0; }
+.nature-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; }
+.nature-gallery figcaption { margin-top: 14px; color: var(--muted); font-size: 12px; line-height: 1.85; }
+.nature-gallery figcaption strong { display: block; margin-bottom: 5px; color: var(--ink); font-size: 15px; font-weight: 500; }
+@media (max-width: 600px) { .nature-gallery { grid-template-columns: minmax(0, 1fr); gap: 28px; } }

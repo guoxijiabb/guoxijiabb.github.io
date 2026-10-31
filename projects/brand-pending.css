@@ -1,0 +1,24 @@
+:root { color-scheme: light; font-family: Arial, 'Microsoft YaHei', sans-serif; color: #302924; background: #f8f5f1; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+.shell { width: min(1280px, calc(100% - 64px)); margin: 0 auto; }
+header { border-bottom: 1px solid #e3dbd2; }
+.header-inner { min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.signature { font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+.back { font-size: 12px; }
+main { padding-top: 100px; padding-bottom: 70px; }
+.eyebrow { margin: 0 0 25px; font-size: 10px; letter-spacing: .2em; font-weight: 700; color: #b84033; }
+h1 { margin: 0; font-size: clamp(54px, 9vw, 128px); letter-spacing: -.07em; line-height: .95; }
+h2 { margin: 25px 0 0; font-size: clamp(22px, 3vw, 38px); font-weight: 500; letter-spacing: -.035em; }
+.status { margin: 65px 0; padding: 44px 0; border-top: 1px solid #e3dbd2; border-bottom: 1px solid #e3dbd2; }
+.status p { margin: 0; color: #756b62; font-size: 16px; line-height: 1.8; }
+.status p + p { margin-top: 12px; color: #9b8b7d; font-size: 13px; }
+.project-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.project-links a { border: 1px solid #e3dbd2; border-radius: 8px; padding: 13px 18px; font-size: 12px; transition: color .2s, border-color .2s, background .2s; }
+.project-links a:hover, .project-links a[aria-current] { color: #fff; background: #b84033; border-color: #b84033; }
+.return { display: inline-flex; gap: 35px; margin-top: 50px; padding: 16px 22px; border-radius: 8px; font-size: 12px; background: #302924; color: #fff; transition: background .2s; }
+.return:hover { background: #b84033; }
+a:focus-visible { outline: 2px solid #b84033; outline-offset: 5px; }
+@media (max-width: 600px) { .shell { width: calc(100% - 32px); } main { padding-top: 65px; } .header-inner { min-height: 66px; } .signature { font-size: 9px; } h1 { font-size: 56px; } .status { margin: 40px 0; padding: 28px 0; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

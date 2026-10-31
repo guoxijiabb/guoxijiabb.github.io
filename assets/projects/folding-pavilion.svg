@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <title>叠亭 · 可伸缩展亭几何构成</title>
+  <defs>
+    <linearGradient id="structure" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#253943"/>
+      <stop offset="1" stop-color="#111C23"/>
+    </linearGradient>
+    <g id="frame" stroke-linejoin="round">
+      <path d="M260 730V460L430 300l170 160v270"/>
+      <path d="M260 460h340M260 730h340" stroke-opacity=".35"/>
+    </g>
+  </defs>
+  <path fill="url(#structure)" d="M0 0h1600v1000H0z"/>
+  <g stroke="#9EB9C0" stroke-opacity=".12" stroke-width="2">
+    <path d="M80 220h1440M80 380h1440M80 540h1440M80 700h1440M240 180v570M560 180v570M880 180v570M1200 180v570"/>
+  </g>
+  <path d="m260 730 760-100h340L600 730H260Z" fill="#9EB9C0" fill-opacity=".06" stroke="#9EB9C0" stroke-opacity=".4" stroke-width="2"/>
+  <g stroke="#9EB9C0" stroke-width="2" stroke-opacity=".5">
+    <path d="m260 460 760-100M430 300l760-100M600 460l760-100"/>
+  </g>
+  <g fill="#E58866" stroke="#E58866" stroke-width="2">
+    <path d="m260 460 170-160 190-25-170 160-190 25Z" fill-opacity=".30"/>
+    <path d="m620 275 170 160 190-25-170-160-190 25Z" fill-opacity=".14"/>
+    <path d="m640 410 170-160 190-25-170 160-190 25Z" fill-opacity=".30"/>
+    <path d="m1000 225 170 160 190-25-170-160-190 25Z" fill-opacity=".14"/>
+  </g>
+  <g stroke="#9EB9C0" stroke-width="3">
+    <use href="#frame" transform="translate(760 -100)" opacity=".55"/>
+    <use href="#frame" transform="translate(570 -75)" opacity=".65"/>
+    <use href="#frame" transform="translate(380 -50)" opacity=".75"/>
+    <use href="#frame" transform="translate(190 -25)" opacity=".85"/>
+  </g>
+  <use href="#frame" stroke="#F0EDDF" stroke-width="4"/>
+  <g stroke="#9EB9C0" stroke-width="2" stroke-opacity=".5">
+    <path d="m260 730 190-305v280l190-305v280l190-305v280l190-305v280"/>
+    <path d="m600 730 190-305v280l190-305v280l190-305v280l190-305v280"/>
+  </g>
+  <g fill="#E58866">
+    <circle cx="430" cy="300" r="11"/><circle cx="620" cy="275" r="11"/>
+    <circle cx="810" cy="250" r="11"/><circle cx="1000" cy="225" r="11"/>
+    <circle cx="1190" cy="200" r="11"/>
+  </g>
+  <path d="M80 806h1440" stroke="#9EB9C0" stroke-opacity=".25"/>
+  <text x="80" y="115" fill="#9EB9C0" font-family="Arial, sans-serif" font-size="30" letter-spacing="7">FOLDING PAVILION / STRUCTURE STUDY</text>
+  <text x="80" y="926" fill="#F0EDDF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="118" font-weight="700">叠亭</text>
+</svg>

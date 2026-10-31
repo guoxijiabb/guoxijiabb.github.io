@@ -1,0 +1,62 @@
+/* Artwork viewer inherits the portfolio's dark presentation. */
+.shrimp-gallery {
+  color: #fff;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: auto;
+  max-width: none;
+  max-height: calc(100dvh - 48px);
+  width: min(1000px, calc(100vw - 64px), calc(148dvh * .663 + 24px));
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #8b9cac #162431;
+  scrollbar-width: thin;
+}
+.shrimp-gallery::backdrop {
+  background: rgb(2 8 15 / 66%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.shrimp-gallery__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+.shrimp-gallery__header h2 {
+  margin: 0;
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.shrimp-gallery__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 80px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid rgb(255 255 255 / 45%);
+  background: rgb(2 8 15 / 72%);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.shrimp-gallery__close:hover { background: #184564; }
+.shrimp-gallery__close:focus-visible { outline: 2px solid #63c7ff; outline-offset: 4px; }
+.shrimp-gallery__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.shrimp-gallery__pair figure { margin: 0; min-width: 0; }
+.shrimp-gallery__pair img { display: block; width: 100%; height: auto; }
+html.shrimp-gallery-open { overflow: hidden; }
+.poster-card:has(img[src*="shrimp-flakes-product"]) { cursor: pointer; }
+@media (max-width: 600px) {
+  .shrimp-gallery { width: calc(100vw - 32px); max-height: calc(100dvh - 32px); }
+  .shrimp-gallery__header { position: sticky; top: 0; z-index: 1; padding: 8px 0; margin-bottom: 12px; background: #08121c; gap: 12px; }
+  .shrimp-gallery__header h2 { font-size: 14px; padding-left: 8px; }
+  .shrimp-gallery__pair { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}

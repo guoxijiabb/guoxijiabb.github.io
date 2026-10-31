@@ -1,0 +1,11 @@
+.role-line { margin: 24px 0 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.daocheng-project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.daocheng-project-grid .company-project { display: flex; flex-direction: column; }
+.daocheng-project-grid .company-project__body { display: flex; flex-direction: column; flex: 1; }
+.daocheng-project-grid .company-project__meta { margin-top: auto; padding-top: 24px; }
+.daocheng-project-grid .company-project img { aspect-ratio: 4 / 3; object-fit: contain; }
+.daocheng-project-grid .company-project--wangxiangu img { object-fit: cover; }
+.daocheng-plan, .daocheng-caption { max-width: 1000px; margin-inline: auto; }
+.daocheng-plan img { width: 100%; height: auto; }
+@media (max-width: 540px) { .role-line { font-size: 13px; } }
+@media (max-width: 600px) { .daocheng-project-grid { grid-template-columns: minmax(0, 1fr); } }

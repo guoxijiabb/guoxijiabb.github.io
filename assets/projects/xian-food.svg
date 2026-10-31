@@ -1,0 +1,14 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="1000" fill="#17100E"/>
+<g stroke="#F0B45A" stroke-width="2" opacity=".65">
+<circle cx="800" cy="500" r="300"/><circle cx="800" cy="500" r="220"/><circle cx="800" cy="500" r="140"/>
+<path d="M800 110V890M410 500H1190M525 225L1075 775M1075 225L525 775"/>
+</g>
+<g fill="#F5E8D2">
+<rect x="255" y="210" width="170" height="170"/><rect x="1175" y="620" width="170" height="170"/>
+</g>
+<g fill="#D64F36"><circle cx="800" cy="500" r="52"/><circle cx="410" cy="500" r="15"/><circle cx="1190" cy="500" r="15"/></g>
+<text x="70" y="105" fill="#F0B45A" font-family="Arial" font-size="31" letter-spacing="8">TWELVE FLAVOURS / XI'AN</text>
+<text x="70" y="890" fill="#F6EBDC" font-family="Arial" font-size="108" font-weight="700">西安十二食辰</text>
+<text x="1190" y="100" fill="#D64F36" font-family="Arial" font-size="32">12 / 24</text>
+</svg>

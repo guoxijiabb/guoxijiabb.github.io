@@ -1,0 +1,19 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="1000" fill="#0D1511"/>
+<circle cx="1260" cy="180" r="240" fill="#D8ED91" opacity=".15"/>
+<g stroke="#D8ED91" stroke-width="2" opacity=".55">
+<path d="M0 780C252 560 400 842 624 650C870 438 1040 644 1600 294"/><path d="M0 842C252 622 400 904 624 712C870 500 1040 706 1600 356"/><path d="M0 904C252 684 400 966 624 774C870 562 1040 768 1600 418"/>
+</g>
+<g transform="translate(582 240)">
+<path d="M0 220L216 95L430 220L214 346L0 220Z" fill="#23352A" stroke="#EAE4D1" stroke-width="3"/>
+<path d="M82 218V398L214 474V346L82 218Z" fill="#18271E" stroke="#EAE4D1" stroke-width="3"/>
+<path d="M214 346V474L348 398V218L214 346Z" fill="#1E3025" stroke="#EAE4D1" stroke-width="3"/>
+<path d="M0 220L214 346L430 220" stroke="#EAE4D1" stroke-width="3"/>
+<path d="M214 95V346" stroke="#EAE4D1" stroke-width="3"/>
+</g>
+<circle cx="1170" cy="600" r="125" stroke="#B9FF54" stroke-width="2"/>
+<path d="M1080 600H1260M1170 510V690" stroke="#B9FF54" stroke-width="2"/>
+<text x="76" y="110" fill="#D8ED91" font-family="Arial" font-size="32" letter-spacing="8">TEA / PLACE / IDENTITY</text>
+<text x="76" y="875" fill="#EEEADF" font-family="Arial" font-size="112" font-weight="700">茶舍新颜</text>
+<text x="80" y="925" fill="#819287" font-family="Arial" font-size="25">RURAL CULTURE × BRAND SYSTEM</text>
+</svg>

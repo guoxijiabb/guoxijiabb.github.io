@@ -1,0 +1,14 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="1000" fill="#08131A"/>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#0B2534"/><stop offset="1" stop-color="#071017"/></linearGradient></defs>
+<rect width="1600" height="1000" fill="url(#g)"/>
+<g stroke="#64DFFF" stroke-width="2" opacity=".52">
+<path d="M80 690C270 510 430 750 600 575C780 388 945 582 1120 398C1264 247 1394 308 1540 170"/>
+<path d="M80 730C270 550 430 790 600 615C780 428 945 622 1120 438C1264 287 1394 348 1540 210"/>
+<path d="M80 770C270 590 430 830 600 655C780 468 945 662 1120 478C1264 327 1394 388 1540 250"/>
+</g>
+<g fill="#B9FF54"><circle cx="245" cy="570" r="15"/><circle cx="610" cy="566" r="15"/><circle cx="1095" cy="425" r="15"/><circle cx="1410" cy="290" r="15"/></g>
+<g stroke="#E4F4F6" opacity=".35"><path d="M245 570L245 315L510 315"/><path d="M610 566L610 250L870 250"/><path d="M1095 425L1095 170L1350 170"/></g>
+<text x="80" y="115" fill="#64DFFF" font-family="Arial" font-size="32" letter-spacing="9">MARITIME SILK ROAD / SEVEN SENSES</text>
+<text x="80" y="900" fill="#ECF7F8" font-family="Arial" font-size="118" font-weight="700">七感·海丝</text>
+</svg>

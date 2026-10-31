@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="郭喜嘉的广美鹅伴校园生活 App UI 设计：项目背景、用户分析、校园互助、服务入口、登录流程、设计规范与信息架构，完整展示八张展板。" />
+  <title>广美鹅伴 · 校园生活 App UI 设计｜郭喜嘉</title>
+  <link rel="stylesheet" href="./ip-project.css" />
+  <link rel="stylesheet" href="./gafa.css" />
+  <script src="./gafa.js" defer></script>
+</head>
+<body>
+  <header class="bar"><div class="shell bar-inner"><a class="name" href="/#top">GUO XIJIA / 郭喜嘉</a><a class="back" href="/?category=ui#visual-browser">← 返回 UI 界面</a></div></header>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">GAFA CAMPUS LIFE / APP UI DESIGN / 8 BOARDS</p>
+        <h1>广美鹅伴</h1>
+        <h2 class="subtitle">广美人的创作与生活，一站连接</h2>
+        <p class="lead">从课表、预约到材料交换与校园展讯，整合校园服务、学习日程与创作资源。以广美红与大鹅形象建立识别，让日常更省心，让创作更有回应。</p>
+        <a class="return return--primary hero-ui-link" href="#interactive-demo">体验交互 Demo <span aria-hidden="true">↓</span></a>
+      </div>
+      <dl class="facts">
+        <div><dt>项目类型</dt><dd>校园生活服务 App · UI/UX 设计</dd></div>
+        <div><dt>设计者</dt><dd>郭喜嘉 / GUO XIJIA</dd></div>
+        <div><dt>设计内容</dt><dd>用户分析 · 信息架构<br />界面设计 · 设计规范</dd></div>
+        <div><dt>核心方向</dt><dd>校园服务 · 创作互助 · 同校连接</dd></div>
+      </dl>
+    </section>
+    <nav class="chapter-nav" aria-label="项目章节">
+      <a class="demo-nav-link" href="#interactive-demo">交互演示 ↗</a>
+      <a href="#chapter-1">01 项目封面</a>
+      <a href="#chapter-2">02 背景与目标</a>
+      <a href="#chapter-3">03 用户分析</a>
+      <a href="#chapter-4">04 校园互动</a>
+      <a href="#chapter-5">05 服务与发布</a>
+      <a href="#chapter-6">06 登录与规范</a>
+      <a href="#chapter-7">07 首页与我的</a>
+      <a href="#chapter-8">08 信息架构</a>
+    </nav>
+    <section class="interactive-demo" id="interactive-demo" aria-labelledby="demo-title">
+      <div class="demo-heading"><div><p class="eyebrow">LIVE PROTOTYPE / 在线体验</p><h2 id="demo-title">广美鹅伴交互演示</h2></div><a class="demo-external" href="./gafa-demo.html" target="_blank" rel="noopener noreferrer">新窗口打开 ↗</a></div>
+      <div class="demo-layout" id="demo-layout">
+        <div class="demo-intro">
+          <span class="demo-badge">可点击 · 可滚动 · 本地演示</span>
+          <h3>把日常，<br />过成灵感。</h3>
+          <p>从校园服务到创作互助，把展板里的界面变成可体验的流程。在右侧点击“开启校园日常”，开始探索。</p>
+          <ul class="demo-features">
+            <li><span>首页与服务</span><small>查看课表、预约场地与常用服务</small></li>
+            <li><span>互助与发现</span><small>筛选材料、寻找搭子、浏览展讯</small></li>
+            <li><span>发布与交流</span><small>发布演示需求、收藏帖子与评论</small></li>
+            <li><span>我的校园</span><small>查看发布、收藏与预约记录</small></li>
+          </ul>
+          <div class="demo-view-controls" role="group" aria-label="演示视图尺寸"><button type="button" data-demo-view="phone" aria-pressed="true">手机视图</button><button type="button" data-demo-view="wide" aria-pressed="false">展开视图</button></div>
+          <p class="demo-help">此为交互设计原型，人物、内容及日程均为演示数据，不连接学校系统，不产生真实预约、发布或消息。演示记录仅保存在当前浏览器；可在“我的”中清空。</p>
+        </div>
+        <div class="demo-window"><div class="demo-window-bar"><span>GAFA LIFE / INTERACTIVE DEMO</span><a href="./gafa-demo.html" target="_blank" rel="noopener noreferrer" aria-label="新窗口打开广美鹅伴交互演示">↗</a></div><iframe src="./gafa-demo.html?embed=1" title="广美鹅伴可交互演示" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms" referrerpolicy="no-referrer"></iframe></div>
+      </div>
+      <p class="demo-fallback">窗口内可以独立滚动，也可<a href="./gafa-demo.html" target="_blank" rel="noopener noreferrer">在新窗口体验 ↗</a>。下方保留完整的 8 张设计展板。</p>
+    </section>
+    <section class="chapter chapter--cover" id="chapter-1">
+      <div class="chapter-heading"><span>01</span><h2>项目封面与核心概念</h2><a href="/assets/visual/gafa/page-01.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-01.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看项目封面高清原图"><img src="/assets/visual/gafa/page-01.jpg" width="2363" height="1773" alt="广美鹅伴 App 封面，校园发现与首页手机界面，主题为广美人的创作与生活一站连接" fetchpriority="high" /></a>
+      <p class="caption">广美鹅伴 / GAFA CAMPUS LIFE：连接校园生活、学习安排与创作日常。</p>
+    </section>
+    <section class="chapter" id="chapter-2">
+      <div class="chapter-heading"><span>02</span><h2>项目背景、定义目标与品牌颜色</h2><a href="/assets/visual/gafa/page-02.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-02.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看背景与目标高清原图"><img src="/assets/visual/gafa/page-02.jpg" width="4252" height="1772" alt="广美鹅伴项目背景、服务入口分散等问题、设计目标与策略，以及广美红和画纸暖白等品牌颜色" loading="lazy" /></a>
+      <p class="caption">从服务入口分散、日程交织与创作信息零散出发，梳理设计目标、策略及品牌色彩。</p>
+    </section>
+    <section class="chapter" id="chapter-3">
+      <div class="chapter-heading"><span>03</span><h2>用户分析与概念画像</h2><a href="/assets/visual/gafa/page-03.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-03.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看用户分析高清原图"><img src="/assets/visual/gafa/page-03.jpg" width="4255" height="1773" alt="用户分析展板，包含新生、创作型与毕业年级学生的场景关注矩阵，以及三类概念用户画像" loading="lazy" /></a>
+      <p class="caption">围绕学习阶段与校园任务，梳理日常服务、课程日程、材料制作及展讯合作需求。</p>
+    </section>
+    <section class="chapter" id="chapter-4">
+      <div class="chapter-heading"><span>04</span><h2>校园互助、校园发现与帖子详情</h2><a href="/assets/visual/gafa/page-04.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-04.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看校园互动界面高清原图"><img src="/assets/visual/gafa/page-04.jpg" width="4236" height="1773" alt="校园互助、校园发现和帖子详情三个重点界面，展示需求卡片、分类筛选、活动入口、评论及关联招募" loading="lazy" /></a>
+      <p class="caption">以需求卡片、校园内容与互动反馈，串联发布需求、同校匹配、参与活动和持续交流。</p>
+    </section>
+    <section class="chapter chapter--square" id="chapter-5">
+      <div class="chapter-heading"><span>05</span><h2>校园服务与内容发布</h2><a href="/assets/visual/gafa/page-05.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-05.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看服务与发布功能高清原图"><img src="/assets/visual/gafa/page-05.jpg" width="2953" height="2950" alt="校园服务入口和内容发布功能分区，包含课表、预约、打印、报修、创作搭子及选择话题到发布交流的流程" loading="lazy" /></a>
+      <p class="caption">把常用服务集中呈现，通过选择话题、补充信息与发布交流，让需求和资源更容易找到同校伙伴。</p>
+    </section>
+    <section class="chapter" id="chapter-6">
+      <div class="chapter-heading"><span>06</span><h2>登录注册流程与设计规范</h2><a href="/assets/visual/gafa/page-06.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-06.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看登录流程与设计规范高清原图"><img src="/assets/visual/gafa/page-06.jpg" width="5025" height="2203" alt="开屏、短信登录、校园认证和兴趣选择四步注册流程，以及字体、字号、间距与圆角设计规范" loading="lazy" /></a>
+      <p class="caption">从首次打开到校园认证与兴趣选择，配合统一的字体层级、间距及圆角规则组织界面。</p>
+    </section>
+    <section class="chapter" id="chapter-7">
+      <div class="chapter-heading"><span>07</span><h2>首页与个人中心功能分区</h2><a href="/assets/visual/gafa/page-07.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-07.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看首页与个人中心高清原图"><img src="/assets/visual/gafa/page-07.jpg" width="5025" height="2518" alt="广美鹅伴首页与我的界面，展示红色主视觉、校园提醒、八项校园服务、用户信息、个人数据与创作记录" loading="lazy" /></a>
+      <p class="caption">首页聚合校园服务与当日安排，个人中心集中呈现身份、内容管理与创作成长记录。</p>
+    </section>
+    <section class="chapter" id="chapter-8">
+      <div class="chapter-heading"><span>08</span><h2>信息架构与差异化机会点</h2><a href="/assets/visual/gafa/page-08.jpg" target="_blank" rel="noopener noreferrer">查看高清原图 ↗</a></div>
+      <a class="board" href="/assets/visual/gafa/page-08.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看信息架构高清原图"><img src="/assets/visual/gafa/page-08.jpg" width="5025" height="2644" alt="广美鹅伴首页、服务、互助、消息和我的五个入口的信息架构，以及功能、视觉和情感三个差异化方向" loading="lazy" /></a>
+      <p class="caption">以五个主入口组织校园任务，从功能协同、创作语境与同校陪伴三个维度总结设计方向。</p>
+    </section>
+    <footer class="closing"><p>广美鹅伴 / GAFA CAMPUS LIFE · 郭喜嘉作品集</p><a class="return return--primary" href="/?category=ui#visual-browser">返回 UI 作品列表 ↗</a></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <title>面出薰大师工作坊 · 灯光与空间几何构成</title>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172A32"/>
+      <stop offset="1" stop-color="#0C151C"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="775" y1="250" x2="1000" y2="730" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EBC579" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#EBC579" stop-opacity=".06"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#night)" d="M0 0h1600v1000H0z"/>
+  <g stroke="#99B1BA" opacity=".12">
+    <path d="M80 220h1440M80 380h1440M80 540h1440M80 700h1440M240 180v570M560 180v570M880 180v570M1200 180v570"/>
+  </g>
+  <g stroke="#90ADB7" stroke-width="2" opacity=".45">
+    <path d="M180 640V330l260-105 315 128v304M440 225v312l315 120M180 640l260-103"/>
+    <path d="M900 678V445l300-125 250 104v254M1200 320v254l250 104M900 678l300-104"/>
+  </g>
+  <path d="m775 252-325 468h790L775 252Z" fill="url(#beam)"/>
+  <path d="m775 252-325 468h790L775 252Z" stroke="#EBC579" stroke-width="2" stroke-opacity=".65"/>
+  <ellipse cx="845" cy="720" rx="395" ry="50" fill="#EBC579" fill-opacity=".12" stroke="#EBC579" stroke-width="2"/>
+  <ellipse cx="845" cy="720" rx="250" ry="31" stroke="#EBC579" stroke-opacity=".45"/>
+  <circle cx="775" cy="252" r="28" fill="#EBC579"/>
+  <circle cx="775" cy="252" r="57" stroke="#EBC579" stroke-opacity=".55"/>
+  <path d="M775 165v-25M688 252h-25M862 252h25" stroke="#EBC579" stroke-width="2"/>
+  <path d="M80 806h1440" stroke="#90ADB7" stroke-opacity=".25"/>
+  <text x="80" y="115" fill="#EBC579" font-family="Arial, sans-serif" font-size="30" letter-spacing="7">LIGHTING DESIGN / KAORU MENDE</text>
+  <text x="80" y="926" fill="#F0EDDF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="108" font-weight="700">面出薰大师工作坊</text>
+</svg>

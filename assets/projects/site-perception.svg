@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <title>场地认知 · 肌理地图几何构成</title>
+  <defs>
+    <linearGradient id="field" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D322B"/>
+      <stop offset="1" stop-color="#0D1B18"/>
+    </linearGradient>
+    <pattern id="texture" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 0v22" stroke="#D1D8B8" stroke-opacity=".35" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <path fill="url(#field)" d="M0 0h1600v1000H0z"/>
+  <g stroke="#D1D8B8" stroke-opacity=".16" stroke-width="2">
+    <path d="M80 220h1440M80 380h1440M80 540h1440M80 700h1440M240 180v570M560 180v570M880 180v570M1200 180v570"/>
+  </g>
+  <path d="m195 320 310-125 300 150-315 145-295-170Z" fill="#2D5148" stroke="#D1D8B8" stroke-width="2"/>
+  <path d="m195 320 295 170v185L195 505V320Z" fill="url(#texture)" stroke="#D1D8B8" stroke-width="2"/>
+  <path d="m490 490 315-145v185L490 675V490Z" fill="#172B25" stroke="#D1D8B8" stroke-width="2"/>
+  <g stroke="#B7C69B" stroke-width="3" stroke-opacity=".65">
+    <path d="M850 310c128-153 465-131 558 37 115 210-19 347-230 333-202-14-314-120-328-212-12-79 51-111 118-134"/>
+    <path d="M912 354c117-133 353-112 427 27 83 156-12 257-169 247-146-10-234-85-245-152-9-54 38-80 86-96"/>
+    <path d="M975 399c87-92 238-78 293 23 53 103-6 171-110 164-94-7-154-54-161-96-6-34 25-49 58-60"/>
+  </g>
+  <path d="M160 730 490 581l555-88 359-216" stroke="#D1D8B8" stroke-width="3" stroke-dasharray="10 13"/>
+  <g fill="#B9FF54">
+    <circle cx="490" cy="581" r="17"/>
+    <circle cx="1045" cy="493" r="17"/>
+  </g>
+  <circle cx="1404" cy="277" r="17" fill="#ED735B"/>
+  <circle cx="1045" cy="493" r="40" stroke="#B9FF54" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M80 806h1440" stroke="#D1D8B8" stroke-opacity=".25"/>
+  <text x="80" y="115" fill="#D1D8B8" font-family="Arial, sans-serif" font-size="30" letter-spacing="6">SITE PERCEPTION / TEXTURE MAPPING</text>
+  <text x="80" y="926" fill="#F0EDDF" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="118" font-weight="700">场地认知</text>
+</svg>

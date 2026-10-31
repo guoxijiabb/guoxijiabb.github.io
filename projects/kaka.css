@@ -1,0 +1,12 @@
+body { --paper: #faf9ec; --ink: #173b25; --muted: #69795c; --line: #dce4c8; --accent: #25843c; }
+.shell { width: min(1700px, calc(100% - 80px)); }
+.hero { gap: 50px; }
+h1 { font-size: clamp(72px, 8vw, 124px); }
+.hero-link { display: inline-flex; align-items: center; gap: 28px; margin-top: 26px; }
+.chapter-nav a { background: #fffef7; }
+.chapter-nav a[href="#applications"] { background: #e7f5bf; border-color: #bfd58a; }
+.chapter-nav a:hover { background: var(--ink); color: var(--paper); }
+.board img { object-fit: contain; }
+.caption { max-width: 1000px; }
+@media (max-width: 900px) { .shell { width: calc(100% - 40px); } }
+@media (max-width: 540px) { .shell { width: calc(100% - 28px); } .hero { gap: 28px; } h1 { font-size: 72px; } .subtitle { font-size: 24px; } }

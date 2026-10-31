@@ -1,0 +1,13 @@
+body { --paper: #f5fbff; --ink: #081638; --muted: #5b7893; --line: #d2e5f0; --accent: #1762cd; }
+.shell { width: min(1200px, calc(100% - 80px)); }
+.hero { gap: 48px; }
+.hero-ui-link { display: inline-flex; align-items: center; gap: 32px; margin-top: 26px; }
+.chapter-nav a { background: #fff; }
+.chapter-nav a[href="#chapter-10"], .chapter-nav a[href="#chapter-11"] { background: #e3f6fd; border-color: #a7d9ee; color: #1762cd; }
+.chapter-nav a:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.board { border-radius: 8px; }
+.board img { object-fit: contain; }
+.chapter--portrait .board { max-width: 1000px; margin-inline: auto; }
+.caption { max-width: 950px; }
+@media (max-width: 900px) { .shell { width: calc(100% - 40px); } }
+@media (max-width: 540px) { .shell { width: calc(100% - 28px); } .hero { gap: 28px; } .chapter-heading h2 { max-width: 100%; } }

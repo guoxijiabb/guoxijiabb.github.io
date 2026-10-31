@@ -1,0 +1,4 @@
+body { --paper: #fbfcf6; --ink: #253b21; --muted: #65785c; --line: #dce5d3; --accent: #3e782c; }
+.chapter-nav a[href="#chapter-6"], .chapter-nav a[href="#chapter-7"] { background: #e9f5d8; border-color: #b9d99c; color: var(--accent); }
+.chapter-nav a:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+@media (max-width: 540px) { h1 { font-size: clamp(32px, 9vw, 42px); } }

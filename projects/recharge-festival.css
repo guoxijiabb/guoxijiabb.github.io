@@ -1,0 +1,36 @@
+body { --paper: #fff9f0; --ink: #1c1027; --muted: #69616c; --line: #d8d5d2; --accent: #205d9f; }
+.shell { width: min(1400px, calc(100% - 80px)); }
+.hero { gap: 48px; }
+.hero h1 { font-size: clamp(48px, 7vw, 96px); }
+.hero .subtitle { font-size: clamp(22px, 2.4vw, 32px); }
+.hero-link { display: inline-flex; gap: 32px; align-items: center; margin-top: 26px; }
+.concept-note { margin: 18px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.chapter-nav a { background: #fffdf8; }
+.chapter-nav a:nth-child(3n + 1):hover { background: #3796e2; border-color: #3796e2; color: #160d20; }
+.chapter-nav a:nth-child(3n + 2):hover { background: #ff99c6; border-color: #ff99c6; color: #160d20; }
+.chapter-nav a:nth-child(3n):hover { background: #dcff37; border-color: #dcff37; color: #160d20; }
+.board { border-radius: 4px; }
+.board img { height: auto; object-fit: contain; }
+.board + .board { margin-top: 24px; }
+.board-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: start; }
+.board-grid figure { min-width: 0; margin: 0; }
+.board-grid figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.board--portrait { max-width: 760px; margin-inline: auto; }
+.chapter-heading h2 { font-weight: 600; }
+.chapter-intro { max-width: 760px; margin: -2px 0 22px; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.palette-summary { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.palette-summary span { border: 1px solid #1c10271f; border-radius: 4px; padding: 8px 12px; font: 11px/1.5 monospace; color: #1c1027; }
+.palette-summary span:nth-child(1) { background: #3796e2; }
+.palette-summary span:nth-child(2) { background: #ff99c6; }
+.palette-summary span:nth-child(3) { background: #dcff37; }
+.palette-summary span:nth-child(4) { background: #fff9f0; }
+@media (max-width: 900px) { .shell { width: calc(100% - 40px); } .hero { gap: 30px; } .board-grid { gap: 14px; } }
+@media (max-width: 640px) {
+  .shell { width: calc(100% - 28px); }
+  .hero h1 { font-size: clamp(42px, 11vw, 64px); }
+  .board-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .chapter-heading a { margin-left: 28px; }
+  .chapter-heading h2 { font-size: 20px; }
+  .board + .board { margin-top: 16px; }
+  .chapter-intro { font-size: 13px; }
+}

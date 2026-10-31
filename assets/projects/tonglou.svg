@@ -1,0 +1,15 @@
+<svg width="1200" height="1560" viewBox="0 0 1200 1560" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="1560" fill="#0B1018"/>
+<g transform="translate(100 160)">
+<path d="M70 950L495 710L932 955L505 1200L70 950Z" fill="#1D2B49" stroke="#85A7FF" stroke-width="3"/>
+<path d="M220 880V300L510 145L790 302V884L504 1044L220 880Z" fill="#101A2B" stroke="#85A7FF" stroke-width="3"/>
+<path d="M220 300L510 465L790 302M510 465V1044" stroke="#85A7FF" stroke-width="3"/>
+<g stroke="#B9FF54" stroke-width="2" opacity=".9">
+<path d="M260 379L474 500V597L260 476V379Z"/><path d="M260 530L474 651V748L260 627V530Z"/><path d="M260 680L474 801V898L260 777V680Z"/>
+<path d="M548 498L750 382V480L548 596V498Z"/><path d="M548 650L750 534V632L548 748V650Z"/><path d="M548 800L750 684V782L548 898V800Z"/>
+</g>
+</g>
+<text x="70" y="90" fill="#B9FF54" font-family="Arial" font-size="25" letter-spacing="7">SYMBIOTIC COMMUNITY</text>
+<text x="70" y="1450" fill="#E9EDF5" font-family="Arial" font-size="96" font-weight="700">筒楼新篇</text>
+<text x="74" y="1505" fill="#8290A8" font-family="Arial" font-size="24" letter-spacing="4">MICRO RENEWAL / 2025</text>
+</svg>

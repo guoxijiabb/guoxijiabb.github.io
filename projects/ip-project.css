@@ -1,0 +1,42 @@
+@import url('./portfolio-black.css');
+:root { color-scheme: light; font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; --paper: #fff8fc; --ink: #392632; --muted: #866d7c; --line: #e9d5e1; --accent: #bd518e; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { margin: 0; background: var(--paper); color: var(--ink); }
+body[data-project="lulu"] { --paper: #f5f9ff; --ink: #142b59; --muted: #617797; --line: #d5e2f5; --accent: #275bed; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.shell { width: min(1700px, calc(100% - 80px)); margin-inline: auto; }
+.bar { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
+.bar-inner { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.name { font-size: 11px; letter-spacing: .12em; font-weight: 700; }
+.back { font-size: 12px; }
+a:hover { color: var(--accent); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 70px; padding: 76px 0 58px; border-bottom: 1px solid var(--line); }
+.eyebrow { margin: 0 0 24px; color: var(--accent); font: 11px/1.6 monospace; letter-spacing: .12em; }
+h1 { margin: 0; font-size: clamp(58px, 7.5vw, 112px); line-height: 1.1; font-weight: 700; letter-spacing: -.055em; }
+.subtitle { margin: 18px 0 0; font-size: clamp(23px, 2.7vw, 38px); font-weight: 500; line-height: 1.45; }
+.lead { max-width: 660px; margin: 28px 0 0; color: var(--muted); font-size: 15px; line-height: 1.95; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; align-self: end; gap: 25px; margin: 0; padding-top: 25px; border-top: 1px solid var(--line); }
+.facts dt { margin-bottom: 9px; color: var(--muted); font-size: 11px; }
+.facts dd { margin: 0; font-size: 13px; line-height: 1.8; }
+.chapter-nav { display: flex; flex-wrap: wrap; gap: 10px; padding: 26px 0 44px; }
+.chapter-nav a { border: 1px solid var(--line); border-radius: 7px; padding: 11px 15px; font-size: 12px; }
+.chapter-nav a:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.chapter { padding-bottom: 54px; }
+.chapter-heading { display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px; }
+.chapter-heading span { color: var(--accent); font: 12px/1 monospace; }
+.chapter-heading h2 { margin: 0; font-size: 23px; font-weight: 500; line-height: 1.5; }
+.chapter-heading a { margin-left: auto; color: var(--muted); font-size: 11px; white-space: nowrap; }
+.board { display: block; background: #fff; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+.board img { display: block; width: 100%; height: auto; }
+.caption { margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.85; }
+.closing { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 30px 0 50px; border-top: 1px solid var(--line); }
+.closing p { color: var(--muted); font-size: 12px; }
+.footer-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.return { padding: 14px 20px; border: 1px solid var(--line); border-radius: 7px; font-size: 12px; }
+.return--primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.return:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+@media (max-width: 900px) { .shell { width: calc(100% - 40px); } .hero { grid-template-columns: 1fr; gap: 35px; padding-top: 50px; } }
+@media (max-width: 540px) { .shell { width: calc(100% - 28px); } .bar-inner { min-height: 64px; } .name { font-size: 9px; } .back { font-size: 11px; } .hero { padding: 38px 0; } h1 { font-size: 60px; } .subtitle { font-size: 25px; } .lead { font-size: 14px; } .facts { gap: 20px; } .chapter-nav { gap: 8px; padding-bottom: 32px; } .chapter-nav a { padding: 10px 11px; font-size: 11px; } .chapter-heading { flex-wrap: wrap; gap: 8px; } .chapter-heading h2 { font-size: 19px; } .chapter-heading a { font-size: 10px; } .chapter { padding-bottom: 35px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
