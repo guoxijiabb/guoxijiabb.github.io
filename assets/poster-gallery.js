@@ -81,9 +81,16 @@
     show(card, event.target.closest('a'));
   }, true);
 
+  const positionCard = card => {
+    const span = String(Math.ceil(card.offsetHeight + 26));
+    if (card.style.gridRowEnd !== `span ${span}`) card.style.gridRowEnd = `span ${span}`;
+  };
+  const masonryObserver = new ResizeObserver(entries => entries.forEach(entry => positionCard(entry.target)));
   function enhance() {
     const cards = document.querySelectorAll('.poster-card');
     for (const card of cards) {
+      masonryObserver.observe(card);
+      positionCard(card);
       const name = card.querySelector('h4')?.textContent || '海报';
       for (const link of card.querySelectorAll('a')) {
         link.removeAttribute('target');

@@ -80,3 +80,27 @@ html.poster-gallery-open { overflow: hidden; }
 
 /* Keep commercial work at three cards per row as the collection grows. */
 @media (min-width: 761px) { .poster-collection:has(#poster-brand-posters-title) .poster-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* Poster wall: natural artwork heights, rounded edges, and continuous masonry. */
+#poster-design .poster-collections { display:block; columns:4; column-gap:26px; }
+#poster-design .poster-collection, #poster-design .poster-grid { display:contents; }
+#poster-design .poster-collection__heading { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+#poster-design .poster-card { display:inline-block; width:100%; max-width:none; margin:0 0 26px; vertical-align:top; break-inside:avoid; border-radius:18px; background:transparent; }
+#poster-design .poster-card__art { display:block; aspect-ratio:auto; border-radius:16px; overflow:hidden; outline-offset:5px; }
+#poster-design .poster-card__art img { display:block; width:100%; height:auto; border-radius:16px; }
+#poster-design .poster-card figcaption { display:block; border:0; padding:14px 5px 0; background:transparent; }
+#poster-design .poster-card__number { font-size:9px; }
+#poster-design .poster-card h4 { margin:7px 0 4px; font-size:14px; line-height:1.6; }
+#poster-design .poster-card__original { min-height:30px; font-size:11px; margin:0; }
+#poster-design .poster-card__art:focus-visible { outline:2px solid #6cc7ff; }
+@media (hover:hover) and (pointer:fine) { #poster-design .poster-card__art:hover { outline:1px solid #eaf3f7; } }
+.poster-gallery__pair img { border-radius:16px; }
+.poster-gallery__close { border-radius:10px; }
+@media(max-width:1199px) { #poster-design .poster-collections { columns:3; column-gap:22px; } #poster-design .poster-card { margin-bottom:22px; } }
+@media(max-width:899px) { #poster-design .poster-collections { columns:2; column-gap:18px; } }
+@media(max-width:539px) { #poster-design .poster-collections { columns:1; } #poster-design .poster-card { margin-bottom:28px; } }
+/* Grid spans keep every masonry column occupied across the semantic groups. */
+#poster-design .poster-collections { display:grid; columns:auto; grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:1px; gap:0 26px; align-items:start; }
+#poster-design .poster-card { display:block; align-self:start; margin:0; }
+@media(max-width:1199px) { #poster-design .poster-collections { grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:22px; } }
+@media(max-width:899px) { #poster-design .poster-collections { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:18px; } }
+@media(max-width:539px) { #poster-design .poster-collections { grid-template-columns:minmax(0,1fr); } }
