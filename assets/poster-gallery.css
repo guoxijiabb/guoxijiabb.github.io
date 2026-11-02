@@ -77,3 +77,6 @@ html.poster-gallery-open { overflow: hidden; }
   .poster-gallery__header h2 { font-size: 14px; padding-left: 8px; }
   .poster-gallery__pair, .poster-gallery[data-layout="series"] .poster-gallery__pair { grid-template-columns: minmax(0, 1fr); gap: 20px; }
 }
+
+/* Keep commercial work at three cards per row as the collection grows. */
+@media (min-width: 761px) { .poster-collection:has(#poster-brand-posters-title) .poster-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

@@ -33,9 +33,13 @@
   function show(card, opener) {
     const cover = card.querySelector('img');
     if (!cover || dialog.open) return;
+    const isRuxuan = cover.src.includes('ruxuan-signage');
     const isOishi = cover.src.includes('shrimp-flakes-product');
     const isMovement = cover.src.includes('100-days-keep-moving');
-    const posters = isMovement ? [
+    const posters = isRuxuan ? [
+      { src: '/assets/posters/ruxuan-signage.jpg', width: 1772, height: 2364, alt: '如轩餐饮视觉：店铺招牌设计与六款砂锅粥产品海报' },
+      { src: '/assets/posters/ruxuan-takeaway.jpg', width: 1773, height: 2364, alt: '如轩餐饮视觉：外卖小程序点餐、会员中心与确认订单界面' },
+    ] : isMovement ? [
       { src: '/assets/posters/100-days-keep-moving.png', width: 941, height: 1672, alt: '100天运动打卡系列海报：KEEP MOVING，运动人物与粉红跑道' },
       { src: '/assets/posters/100-day-challenge.png', width: 941, height: 1672, alt: '100天运动打卡系列海报：100 DAY CHALLENGE，打卡跑道与金色奖杯' },
       { src: '/assets/posters/100-days-every-day.png', width: 941, height: 1672, alt: '100天运动打卡系列海报：MOVE A LITTLE EVERY DAY，数字100与草地运动场景' },
@@ -85,7 +89,7 @@
         link.removeAttribute('target');
         link.setAttribute('aria-haspopup', 'dialog');
         link.setAttribute('aria-controls', dialog.id);
-        link.setAttribute('aria-label', `放大查看${name}${card.querySelector('img')?.src.includes('100-days-keep-moving') ? '三张海报' : card.querySelector('img')?.src.includes('shrimp-flakes-product') ? '两张海报' : '海报'}`);
+        link.setAttribute('aria-label', `放大查看${name}${card.querySelector('img')?.src.includes('100-days-keep-moving') ? '三张海报' : card.querySelector('img')?.src.match(/shrimp-flakes-product|ruxuan-signage/) ? '两张海报' : '海报'}`);
       }
     }
     return cards.length > 0;
