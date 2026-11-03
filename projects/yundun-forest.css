@@ -1,0 +1,8 @@
+.forest-section { padding-top:40px; scroll-margin-top:100px; }
+.forest-section h2 { font-size:24px; line-height:1.5; font-weight:500; margin:0 0 24px; }
+.forest-cover { max-width:950px; margin:0 auto 48px; }
+.forest-section .tent-gallery { padding:0 0 40px; }
+.forest-section .tent-board:first-child { grid-column:auto; }
+.forest-section .aplus-gallery { grid-template-columns:1fr; gap:32px; }
+.forest-section .main-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media(max-width:600px) { .forest-section .main-gallery { grid-template-columns:1fr; } .forest-section { padding-top:28px; } }
