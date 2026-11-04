@@ -1,0 +1,6 @@
+.timeline__title-row { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:8px; }
+.timeline__title-row h3 { margin-bottom:0; min-width:0; }
+.timeline__work-link { flex-shrink:0; display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border:1px solid #4392be; border-radius:6px; color:#70b7e7; font-size:13px; line-height:1.6; text-decoration:none; }
+.timeline__work-link:hover { background:#70b7e7; color:#000; }
+.timeline__work-link:focus-visible { outline:2px solid #70b7e7; outline-offset:4px; }
+@media(max-width:600px) { .timeline__title-row { flex-wrap:wrap; gap:10px; margin-bottom:12px; } .timeline__work-link { min-height:44px; padding:10px 14px; } }
