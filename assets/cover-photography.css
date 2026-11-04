@@ -1,0 +1,2 @@
+.cover-folder--photography { --folder-roll:2deg; --folder-yaw:-9deg; --object-delay:.89s; top:10%; right:2.5%; }
+@media (max-width:700px) { .cover-folder--photography { top:12%; right:6%; } }
