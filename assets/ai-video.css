@@ -1,0 +1,7 @@
+.ai-video-project { max-width:1240px; margin:0; }
+.ai-video-project > img { display:block; width:100%; height:auto; border-radius:16px; }
+.ai-video-project figcaption { display:flex; justify-content:space-between; align-items:flex-end; gap:24px; padding:24px 0; border-bottom:1px solid #292929; }
+.ai-video-project .eyebrow { margin:0 0 12px; color:#70b7e7; }
+.ai-video-project h3 { margin:0; font-size:clamp(24px,3vw,38px); font-weight:500; }
+.ai-video-project figcaption > span { color:#a7b2bb; font-size:13px; }
+@media(max-width:600px) { .ai-video-project figcaption { align-items:flex-start; flex-direction:column; gap:14px; padding:20px 0; } }
