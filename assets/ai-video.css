@@ -5,3 +5,8 @@
 .ai-video-project h3 { margin:0; font-size:clamp(24px,3vw,38px); font-weight:500; }
 .ai-video-project figcaption > span { color:#a7b2bb; font-size:13px; }
 @media(max-width:600px) { .ai-video-project figcaption { align-items:flex-start; flex-direction:column; gap:14px; padding:20px 0; } }
+.ai-video-project--tmall { margin-top:56px; }
+.ai-video-preview { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; position:relative; border-radius:16px; overflow:hidden; }
+.ai-video-preview img { display:block; width:100%; aspect-ratio:2/3; object-fit:cover; }
+.ai-video-preview-label { position:absolute; right:16px; bottom:16px; padding:12px 18px; border-radius:8px; background:rgb(0 0 0 / .8); color:#fff; }
+@media(max-width:600px) { .ai-video-preview { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; } }
