@@ -38,7 +38,7 @@
   q('.cinema-auto').onclick = () => { auto = !auto; q('.cinema-auto').textContent = auto ? '暂停轮播' : '自动轮播'; q('.cinema-auto').setAttribute('aria-label',auto?'暂停项目自动轮播':'开启项目自动轮播'); schedule(); };
   if (!auto) q('.cinema-auto').textContent = '自动轮播';
   screen.addEventListener('keydown', e => { if(e.target===screen && ['ArrowLeft','ArrowRight'].includes(e.key)) { e.preventDefault(); select(project+(e.key==='ArrowRight'?1:-1)); } });
-  screen.addEventListener('pointerdown', e => { if(e.target===video)return; pointer={x:e.clientX,y:e.clientY}; screen.setPointerCapture(e.pointerId); });
+  screen.addEventListener('pointerdown', e => { if(e.target===video && e.clientY>video.getBoundingClientRect().bottom-50)return; pointer={x:e.clientX,y:e.clientY}; if(e.target!==video)screen.setPointerCapture(e.pointerId); });
   screen.addEventListener('pointerup', e => { if(!pointer)return; const dx=e.clientX-pointer.x; if(Math.abs(dx)>45 && Math.abs(dx)>Math.abs(e.clientY-pointer.y))select(project+(dx<0?1:-1)); pointer=null; });
   screen.addEventListener('pointercancel',()=>{pointer=null;});
   q('.cinema-still').draggable=false;
