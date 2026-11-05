@@ -47,6 +47,7 @@
   el.addEventListener('focusin',schedule); el.addEventListener('focusout',()=>setTimeout(schedule,0));
   document.addEventListener('visibilitychange',()=>{if(document.hidden)video.pause();else play();schedule();});
   new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(!visible)video.pause();else play();schedule();},{threshold:.2}).observe(el);
+  select(1);
  }
  new MutationObserver(init).observe(document.body,{childList:true,subtree:true}); init();
 })();
