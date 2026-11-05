@@ -5,12 +5,12 @@
   el.dataset.ready = 'true';
   const q = s => el.querySelector(s), video = q('video'), screen = q('.cinema-screen');
   const seasons = ['元宵','春节','端午','五一'];
-  let project = 0, version = 0, auto = !matchMedia('(prefers-reduced-motion:reduce)').matches, visible = false, hovering = false, timer, pointer;
+  let project = 0, version = 0, auto = !matchMedia('(prefers-reduced-motion:reduce)').matches, visible = false, hovering = false, timer, pointer, workflowOpen = false;
   function schedule() {
    clearTimeout(timer);
-   if (auto && visible && !hovering && !document.hidden && !el.contains(document.activeElement)) timer = setTimeout(() => select(project + 1),12000);
+   if (!workflowOpen && auto && visible && !hovering && !document.hidden && !el.contains(document.activeElement)) timer = setTimeout(() => select(project + 1),12000);
   }
-  function play() { if (visible && project && !document.hidden) video.play().catch(() => {}); }
+  function play() { if (!workflowOpen && visible && project && !document.hidden) video.play().catch(() => {}); }
   function season(i) {
    version = i;
    const base = '/assets/ai-video/tmall-opening/kv-' + String(i+1).padStart(2,'0');
@@ -22,6 +22,7 @@
    project = (i+2)%2; video.pause();
    q('.cinema-still').hidden = !!project; video.hidden = !project;
    q('.cinema-versions').hidden = !project; q('.cinema-detail').hidden = !project;
+   q('.cinema-workflow').hidden = !!project;
    const title = project ? '天猫超市 · 手机开屏 KV' : '轮回千年';
    q('.cinema-title').textContent = title; q('.cinema-now').textContent = title;
    q('.cinema-counter').textContent = String(project+1).padStart(2,'0')+' / 02';
@@ -45,6 +46,7 @@
   el.addEventListener('pointerenter', e => { if(e.pointerType==='mouse')hovering=true; schedule(); });
   el.addEventListener('pointerleave',()=>{hovering=false;schedule();});
   el.addEventListener('focusin',schedule); el.addEventListener('focusout',()=>setTimeout(schedule,0));
+  document.addEventListener('cinema-workflow-change', e => { workflowOpen=!!e.detail; if(workflowOpen)video.pause();else play();schedule(); });
   document.addEventListener('visibilitychange',()=>{if(document.hidden)video.pause();else play();schedule();});
   new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(!visible)video.pause();else play();schedule();},{threshold:.2}).observe(el);
   select(1);
