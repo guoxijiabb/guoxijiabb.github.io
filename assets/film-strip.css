@@ -30,3 +30,5 @@
 @media (max-width: 700px) {
   .film-track { --card-w: min(82vw, 440px); }
 }
+
+.film-track.is-recentering .film-card { transition: none; }

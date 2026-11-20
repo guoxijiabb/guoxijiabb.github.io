@@ -5,7 +5,26 @@
     root.dataset.ready = 'true';
 
     const track = root.querySelector('.film-track');
-    const cards = [...track.querySelectorAll('.film-card')];
+    const originals = [...track.querySelectorAll('.film-card')];
+    const count = originals.length;
+
+    function copyCard(card) {
+      const copy = card.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      copy.removeAttribute('aria-current');
+      copy.classList.remove('is-current');
+      copy.tabIndex = -1;
+      copy.querySelector('img').loading = 'lazy';
+      return copy;
+    }
+
+    const leading = originals.map(copyCard);
+    const trailing = originals.map(copyCard);
+    track.prepend(...leading);
+    track.append(...trailing);
+    const cards = [...leading, ...originals, ...trailing];
+    const logicalIndex = position => position % count;
+    const center = card => card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2;
     const motion = matchMedia('(prefers-reduced-motion: reduce)');
     const toggle = root.querySelector('.film-auto');
     const preview = document.createElement('video');
@@ -25,16 +44,34 @@
       return stage;
     });
 
-    let current = 0;
+    let current = count;
     let auto = !motion.matches;
     let visible = false;
     let pending = false;
     let timer;
+    let rotationTimer;
+    let settleTimer;
     let frame;
+    let pressed = false;
     let pointer;
     let moved = false;
 
-    const canPlay = () => auto && visible && !document.hidden && !pending && !moved;
+    const canPlay = () => auto && visible && !document.hidden && !pending && !pressed && !moved;
+
+    const canRotate = () => canPlay() && !track.querySelector(':focus-visible') && !track.matches(':focus-visible');
+
+    function syncRotation() {
+      clearTimeout(rotationTimer);
+      if (!canRotate()) return;
+      rotationTimer = setTimeout(() => {
+        if (canRotate()) select(current + 1);
+      }, 7000);
+    }
+
+    function syncPlayback() {
+      syncPreview();
+      syncRotation();
+    }
 
     function syncPreview() {
       clearTimeout(timer);
@@ -60,7 +97,7 @@
       preview.remove();
       stages.forEach(stage => stage.classList.remove('has-preview'));
       stages[current].append(preview);
-      syncPreview();
+      syncPlayback();
     }
 
     preview.addEventListener('playing', () => stages[current].classList.add('has-preview'));
@@ -70,42 +107,70 @@
       const changed = current !== index;
       current = index;
       const card = cards[index];
-      cards.forEach((item, i) => {
-        item.classList.toggle('is-current', i === index);
-        if (i === index) item.setAttribute('aria-current', 'true');
+      cards.forEach((item, i) => item.classList.toggle('is-current', i === index));
+      originals.forEach((item, i) => {
+        if (i === logicalIndex(index)) item.setAttribute('aria-current', 'true');
         else item.removeAttribute('aria-current');
       });
       root.querySelector('.film-now').textContent = card.querySelector('h3').textContent;
       root.querySelector('.film-eyebrow').textContent = card.dataset.eyebrow;
       root.querySelector('.film-meta p:last-child').textContent = card.dataset.description;
-      root.querySelector('.film-count').textContent = String(index + 1).padStart(2, '0') + ' / ' + String(cards.length).padStart(2, '0');
+      root.querySelector('.film-count').textContent = String(logicalIndex(index) + 1).padStart(2, '0') + ' / ' + String(count).padStart(2, '0');
       if (changed) resetPreview();
     }
 
     function select(index, behavior = motion.matches ? 'instant' : 'smooth') {
+      clearTimeout(rotationTimer);
       index = (index + cards.length) % cards.length;
-      update(index);
-      track.scrollTo({
-        left: cards[index].offsetLeft - (track.clientWidth - cards[index].offsetWidth) / 2,
-        behavior,
-      });
+      track.scrollTo({ left: center(cards[index]), behavior });
+      if (behavior === 'instant') update(index);
+      if (behavior === 'smooth') {
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(settle, 180);
+      }
+    }
+
+    function nearestPosition() {
+      const left = track.scrollLeft;
+      return cards.reduce((closest, card, index) =>
+        Math.abs(center(card) - left) < Math.abs(center(cards[closest]) - left) ? index : closest, current);
+    }
+
+    function settle() {
+      if (pressed || moved || pending) return;
+      const index = nearestPosition();
+      const middle = count + logicalIndex(index);
+      if (index !== middle) {
+        track.classList.add('is-recentering');
+        select(middle, 'instant');
+        // Apply the matching card's final appearance before restoring transitions.
+        cards[middle].getBoundingClientRect();
+        track.classList.remove('is-recentering');
+      } else if (index !== current) {
+        update(index);
+      }
+      syncPlayback();
     }
 
     track.addEventListener('scroll', () => {
+      clearTimeout(rotationTimer);
+      clearTimeout(settleTimer);
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
-        const center = track.scrollLeft + track.clientWidth / 2;
-        const distance = card => Math.abs(card.offsetLeft + card.offsetWidth / 2 - center);
-        const closest = cards.reduce((best, card) => distance(card) < distance(best) ? card : best);
-        const index = cards.indexOf(closest);
+        const index = nearestPosition();
         if (index !== current) update(index);
       });
+      settleTimer = setTimeout(settle, 180);
     }, { passive: true });
 
     track.addEventListener('pointerdown', event => {
-      if (event.pointerType !== 'mouse' || event.button !== 0) return;
-      pointer = { x: event.clientX, start: track.scrollLeft, id: event.pointerId };
+      if (!event.isPrimary || event.button !== 0) return;
+      pressed = true;
+      if (event.pointerType === 'mouse') {
+        pointer = { x: event.clientX, start: track.scrollLeft, id: event.pointerId };
+      }
       moved = false;
+      syncPlayback();
     });
     track.addEventListener('pointermove', event => {
       if (!pointer) return;
@@ -118,19 +183,25 @@
       }
       if (moved) track.scrollLeft = pointer.start - dx;
     });
-    function endDrag() {
-      if (!pointer) return;
+    function endDrag(event) {
+      if (!pressed || !event.isPrimary) return;
+      pressed = false;
       pointer = null;
       track.classList.remove('is-dragging');
-      if (!moved) return;
-      select(current);
+      if (!moved) {
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(settle, 180);
+        return;
+      }
+      select(nearestPosition());
       setTimeout(() => {
         moved = false;
-        syncPreview();
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(settle, 180);
       }, 0);
     }
-    track.addEventListener('pointerup', endDrag);
-    track.addEventListener('pointercancel', endDrag);
+    window.addEventListener('pointerup', endDrag);
+    window.addEventListener('pointercancel', endDrag);
 
     cards.forEach((card, index) => {
       card.addEventListener('dragstart', event => event.preventDefault());
@@ -149,7 +220,7 @@
 
         event.preventDefault();
         pending = true;
-        syncPreview();
+        syncPlayback();
         const rect = card.getBoundingClientRect();
         const overlay = document.createElement('div');
         const image = new Image();
@@ -164,14 +235,14 @@
           { transform: 'translate(0,0) scale(1)' },
           { transform: `translate(${(innerWidth - rect.width * scale) / 2 - rect.left}px,${(innerHeight - rect.height * scale) / 2 - rect.top}px) scale(${scale})` },
         ], { duration: 500, easing: 'cubic-bezier(.77,0,.175,1)', fill: 'forwards' });
-        try { sessionStorage.setItem('film-entry', card.dataset.film || String(index)); } catch {}
+        try { sessionStorage.setItem('film-entry', card.dataset.film || String(logicalIndex(index))); } catch {}
         setTimeout(() => location.assign(card.href), 500);
       });
     });
 
     function label() {
-      toggle.textContent = auto ? '暂停预览' : '播放预览';
-      toggle.setAttribute('aria-label', auto ? '暂停卡片内视频预览' : '播放卡片内视频预览');
+      toggle.textContent = auto ? '暂停轮播' : '继续轮播';
+      toggle.setAttribute('aria-label', auto ? '暂停胶卷轮播与视频预览' : '继续胶卷轮播与视频预览');
     }
 
     root.querySelector('.film-prev').onclick = () => select(current - 1);
@@ -179,34 +250,40 @@
     toggle.onclick = () => {
       auto = !auto;
       label();
-      syncPreview();
+      syncPlayback();
     };
     motion.addEventListener('change', event => {
       auto = !event.matches;
       label();
-      syncPreview();
+      syncPlayback();
     });
     track.addEventListener('keydown', event => {
       if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
       event.preventDefault();
-      select(event.key === 'Home' ? 0 : event.key === 'End' ? cards.length - 1 : current + (event.key === 'ArrowRight' ? 1 : -1));
+      select(event.key === 'Home' ? count : event.key === 'End' ? 2 * count - 1 : current + (event.key === 'ArrowRight' ? 1 : -1));
     });
-    document.addEventListener('visibilitychange', syncPreview);
+    track.addEventListener('focusin', syncRotation);
+    track.addEventListener('focusout', () => queueMicrotask(syncRotation));
+    document.addEventListener('visibilitychange', syncPlayback);
     new IntersectionObserver(([entry]) => {
       visible = entry.intersectionRatio >= 0.35;
-      syncPreview();
+      syncPlayback();
     }, { threshold: 0.35 }).observe(track);
     window.addEventListener('pageshow', () => {
       pending = false;
       document.querySelectorAll('.film-transition').forEach(node => node.remove());
-      syncPreview();
+      syncPlayback();
     });
     new ResizeObserver(() => {
-      if (!pointer) select(current, 'instant');
+      if (!pressed) {
+        select(count + logicalIndex(current), 'instant');
+        syncPlayback();
+      }
     }).observe(track);
 
+    root.querySelector('.film-hint').textContent = '胶卷自动向左轮播 · 可拖动浏览 · 点击居中卡片观看正片';
     label();
-    update(0);
+    select(count, 'instant');
     resetPreview();
   }
 
