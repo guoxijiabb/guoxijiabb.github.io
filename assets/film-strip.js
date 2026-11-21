@@ -65,7 +65,7 @@
       if (!canRotate()) return;
       rotationTimer = setTimeout(() => {
         if (canRotate()) select(current + 1);
-      }, 7000);
+      }, 6000);
     }
 
     function syncPlayback() {
