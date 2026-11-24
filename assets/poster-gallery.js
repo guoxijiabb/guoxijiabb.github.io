@@ -34,6 +34,7 @@
     const isRuxuan = cover.src.includes('ruxuan-signage');
     const isOishi = cover.src.includes('shrimp-flakes-product');
     const isMovement = cover.src.includes('100-days-keep-moving');
+    const isOlakala = cover.src.includes('olakala-neighbours-cherries-floating');
     return isRuxuan ? [
       { src: '/assets/posters/ruxuan-signage.jpg', width: 1772, height: 2364, alt: '如轩餐饮视觉：店铺招牌设计与六款砂锅粥产品海报' },
       { src: '/assets/posters/ruxuan-takeaway.jpg', width: 1773, height: 2364, alt: '如轩餐饮视觉：外卖小程序点餐、会员中心与确认订单界面' },
@@ -44,6 +45,9 @@
     ] : isOishi ? [
       { src: '/assets/posters/shrimp-flakes-product.webp', width: 1024, height: 1536, alt: '蒜香味鲜虾片产品海报：海浪、鲜虾片包装与大蒜' },
       { src: '/assets/posters/shrimp-flakes-beach.webp', width: 1021, height: 1541, alt: '蒜香味鲜虾片场景海报：两人在热带海滩分享鲜虾片' },
+    ] : isOlakala ? [
+      { src: '/assets/posters/olakala-neighbours-cherries-floating.png', width: 1086, height: 1448, alt: 'OLAKALA Neighbour’s Cherries 红色香水瓶居中，完整樱桃与切开的果肉悬浮在四周' },
+      { src: '/assets/posters/olakala-neighbours-cherries-still-life.png', width: 1086, height: 1448, alt: 'OLAKALA Neighbour’s Cherries 红色香水瓶与鲜樱桃摆在白色台面上，底部映出倒影' },
     ] : [{
       src: card.querySelector('a.poster-card__art').href,
       width: Number(cover.getAttribute('width')),
