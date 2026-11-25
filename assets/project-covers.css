@@ -43,3 +43,10 @@
 @media (max-width: 540px) {
   .visual-grid.visual-grid--ip { grid-template-columns: minmax(0, 1fr); gap: 20px; }
 }
+
+/* Show the entire artwork at the existing category card dimensions. */
+.visual-category-card .visual-card__cover .visual-category-art {
+  display: block;
+  object-fit: contain;
+  transform: none;
+}
